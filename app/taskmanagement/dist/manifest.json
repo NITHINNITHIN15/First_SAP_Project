@@ -1,0 +1,196 @@
+{
+	"_version": "1.76.0",
+	"sap.app": {
+		"id": "taskmanagement",
+		"type": "application",
+		"i18n": {
+			"bundleUrl": "i18n/i18n.properties",
+			"supportedLocales": [
+				""
+			]
+		},
+		"applicationVersion": {
+			"version": "0.0.1"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"resources": "resources.json",
+		"sourceTemplate": {
+			"id": "@sap/generator-fiori:lrop",
+			"version": "1.19.3",
+			"toolsId": "abdd2dca-c13c-4145-84a1-79413dfb65e9"
+		},
+		"dataSources": {
+			"mainService": {
+				"uri": "/odata/v4/task/",
+				"type": "OData",
+				"settings": {
+					"annotations": [],
+					"odataVersion": "4.0"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": true,
+		"dependencies": {
+			"minUI5Version": "1.142.0",
+			"libs": {
+				"sap.m": {},
+				"sap.ui.core": {},
+				"sap.fe.templates": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "taskmanagement.i18n.i18n",
+					"supportedLocales": [
+						""
+					]
+				}
+			},
+			"": {
+				"dataSource": "mainService",
+				"preload": true,
+				"settings": {
+					"operationMode": "Server",
+					"autoExpandSelect": true,
+					"earlyRequests": true
+				}
+			},
+			"@i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties",
+				"settings": {
+					"supportedLocales": [
+						""
+					]
+				}
+			}
+		},
+		"resources": {
+			"css": []
+		},
+		"routing": {
+			"config": {},
+			"routes": [
+				{
+					"pattern": ":?query:",
+					"name": "ProjectsList",
+					"target": "ProjectsList"
+				},
+				{
+					"pattern": "Projects({key}):?query:",
+					"name": "ProjectsObjectPage",
+					"target": "ProjectsObjectPage"
+				},
+				{
+					"pattern": "Projects({key})/employees({key1})",
+					"name": "EmployeesObjectPage",
+					"target": "EmployeesObjectPage"
+				}
+			],
+			"targets": {
+				"ProjectsList": {
+					"type": "Component",
+					"id": "ProjectsList",
+					"name": "sap.fe.templates.ListReport",
+					"options": {
+						"settings": {
+							"contextPath": "/Projects",
+							"variantManagement": "Page",
+							"initialLoad": true,
+							"controlConfiguration": {
+								"@com.sap.vocabularies.UI.v1.LineItem": {
+									"actions": {
+										"loadAction": {
+											"press": "taskmanagement.custom.CustomActions.Load",
+											"text": "Load",
+											"enabled": true,
+											"visible": true
+										},
+										"showAction": {
+											"press": "taskmanagement.custom.CustomActions.Show",
+											"text": "Show",
+											"enabled": true,
+											"visible": true
+										},
+										"AccessAction": {
+											"press": "taskmanagement.custom.CustomActions.Access",
+											"text": "Access",
+											"enabled": true,
+											"visible": true
+										}
+									}
+								}
+							},
+							"navigation": {
+								"Projects": {
+									"detail": {
+										"route": "ProjectsObjectPage"
+									}
+								}
+							}
+						}
+					}
+				},
+				"ProjectsObjectPage": {
+					"type": "Component",
+					"id": "ProjectsObjectPage",
+					"name": "sap.fe.templates.ObjectPage",
+					"options": {
+						"settings": {
+							"contextPath": "/Projects",
+							"editableHeaderContent": false,
+							"navigation": {
+								"employees": {
+									"detail": {
+										"route": "EmployeesObjectPage"
+									}
+								}
+							}
+						}
+					}
+				},
+				"EmployeesObjectPage": {
+					"type": "Component",
+					"id": "EmployeesObjectPage",
+					"name": "sap.fe.templates.ObjectPage",
+					"options": {
+						"settings": {
+							"contextPath": "/Employees",
+							"editableHeaderContent": false
+						}
+					}
+				}
+			}
+		},
+		"sap.fiori": {
+			"registrationIds": [],
+			"archeType": "transactional"
+		},
+		"flexBundle": false
+	}
+}

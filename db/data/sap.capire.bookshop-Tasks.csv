@@ -1,0 +1,13 @@
+ID;title;description;status;dueDate;assignedTo_ID;project_ID
+3f5c8b4a-bab0-4fcb-9b39-4d9f6b2ce8a1;Build UI;Create Fiori Elements pages;I;2025-11-30;c7e4c3a1-22a1-4af6-8e7a-6a2d9efb4120;c1a9d7b1-3f42-4c12-bd9f-001a7c5f1a01
+8a2d47be-6c13-4f1b-8fa3-3b9b8cc4a81c;Write Tests;Add unit tests;P;2025-12-10;a1d7fda5-1db2-48de-b2a2-9d72a861c431;c1a9d7b1-3f42-4c12-bd9f-001a7c5f1a01
+f02cda9d-6e49-4a25-b587-0bcb42b3e5e7;Review Code;Review pull requests;C;2025-11-15;dc31a8e9-5a7b-46af-b4de-8e7a963fa1b8;b2d4e6f2-8b7a-47f9-a3c1-002b8e9c7b92
+a1f4b6c8-2e8b-4a3d-90b9-2b6e7f9d1a4f;Fix Bugs;Resolve UI issues;I;2025-11-25;e71d9fcb-42a3-4a21-9b5b-1af2e672d451;b2d4e6f2-8b7a-47f9-a3c1-002b8e9c7b92
+b3d5e7f9-4a8c-4e1b-92f7-3c9d8f1a2b5e;Database Setup;Design schema and entities;C;2025-10-28;f32b7a8c-61a8-441f-b67f-52fd2d46f2b9;e1f3b6c9-9d62-4a2c-8e71-11b7c5f9e6a4
+c4e6f8a9-5b9d-4d1a-95e8-4d1f9a3b5c7d;Implement API;Develop REST services;I;2025-12-05;a9d6f2c8-6d48-4c25-83df-18b3c8e7a4f5;e1f3b6c9-9d62-4a2c-8e71-11b7c5f9e6a4
+d5f7a9b1-6c1e-4b9a-93f1-5e8a4d7f9b2e;Design Wireframes;Create UX designs;P;2025-11-22;d7e2a3b1-3e1a-43af-98cd-2a4d8cf7f911;c8b7a6e5-5f1d-4e9f-8c3a-13e9f2a7b8c4
+e6a8b2c4-7d2f-4a3b-94f2-6f1a9d2e8c3b;Deploy Application;Setup CI/CD pipelines;I;2025-12-12;f6b8d3a2-1e48-4a8a-b17f-4f2c1e8d9b21;f9e2d3c4-7b5a-4a8e-9f6c-16b9a3d2f8e1
+f7b9c3d5-8e3a-4b4c-95f3-7a2d9b3f4c1d;Prepare Documentation;Write API documentation;C;2025-11-18;b4e7c6a2-9e23-48a7-82af-4d8e3d2f1b62;a1e3b9c5-8f2d-4b9c-9a8d-14f9c3d7b5e6
+g8c1d4e6-9f4b-4c5a-96f4-8b3e9c4d5a2f;Testing;Perform system integration tests;P;2025-12-28;e3c2b1d9-8a4f-4c9b-b9d4-1b6f7d2a3c45;f7a3b5c6-1d8e-4c7f-b2a9-12d8e9a6b4f2
+h1i2j3k4-5l6m-7n8o-9p1q-10r2s3t4u5v;Create Login Module;Implement authentication;I;2025-11-27;a2f3e6b8-7d3a-4a9b-8f1c-2d7e9a4c6f1a;d4e2f9a7-7c82-4b19-9e54-10a7c3d4e8f1
+i2j3k4l5-6m7n-8o9p-1q2r-11s3t4u5v6w;Optimize Queries;Improve DB performance;P;2025-12-18;b9f2d8c6-4e1a-49a9-83b2-2f
