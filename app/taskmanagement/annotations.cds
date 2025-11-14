@@ -18,17 +18,17 @@ annotate service.Projects with @(UI: {
   LineItem           : [
     {
       Value: projectName,
-      Label: 'Project Name',
+      Label: 'Project Nameeeeeeee',
       width:'50rem'
     },
     {
       Value: startDate,
-      Label: 'Start Date',
+      Label: 'Start Dateeeeeeee',
       width: '70rem'
     },
     {
       Value: endDate,
-      Label: 'End Date',
+      Label: 'End Dateeeeeeee',
       width: '20rem'
     }
   ],
